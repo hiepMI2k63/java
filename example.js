@@ -1,5 +1,74 @@
 // In javaScript , Objects is king , if you understand object , you understand javaScript
+//OBJECT 
+/* // create 
+ //1. using an object literal 
+const person ={
+    fisrtName:"John",
+    lastName:"doe", 
+    coloreye:"blue",
 
+}
+//2. using the new key
+const person1 = new Object();
+person1.fisrtName = "Nguyen";
+person1.fullNamw ="Nguyenvanhiep";
+person1.todo = function (voie) {
+    console.log("say"+voie);
+}
+console.log(person1.fullNamw);
+//3. umtable ( can change)
+        // objects are umtable : they are addressed by reference, not by value
+        const a1= person1;
+        a1.fullNamw = "nguyen van hiep";
+        console.log( person1.fullNamw);
+ */
+
+//PROPERTIES
+ // accessing javascript properties
+ const person1 = new Object();
+person1.fisrtName = "Nguyen";
+person1.fullNamw ="Nguyenvanhiep";
+person1.todo = function (voie) {
+    console.log("say"+voie);
+}
+    //    console.log(person1.fullNamw);
+    //    console.log(person1["fullNamw"]);
+    //    c = "fullNamw";
+    //    console.log(person1[c]);
+// Print value of object 
+for (const x in person1) {
+    console.log(person1[x]);
+}
+
+//Adding New Properties
+    // you can add new properties to an existing object
+    
+// delete properties
+delete person1.todo;
+for (const x in person1) {
+    console.log(person1[x]);
+}
+
+// object methods
+        //What is this?
+        // In JavaScript, the this keyword refers to an object.
+
+        // Which object depends on how this is being invoked (used or called).
+
+        // The this keyword refers to different objects depending on how it is used:
+
+        // In an object method, this refers to the object.
+        // Alone, this refers to the global object.
+        // In a function, this refers to the global object.
+        // In a function, in strict mode, this is undefined.
+        // In an event, this refers to the element that received the event.
+        // Methods like call(), apply(), and bind() can refer this to any object.
+
+ //Display Objects
+//....
+     //Using JSON.stringify()
+    //Any JavaScript object can be stringified (converted to a string) with the JavaScript function JSON.stringify():
+   console.log( JSON.stringify(person1));
 
 
 /* //JavaScript Function Definitions
@@ -159,3 +228,5 @@ function name1(a) {
 // });
 // removebycondition(myNumbers,a);
 // removebycondition(myNumbers,name1);
+
+//
